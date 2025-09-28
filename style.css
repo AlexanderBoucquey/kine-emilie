@@ -1,0 +1,252 @@
+/* ----- Kinepraktijk Emilie Boucquey - Huisstijl ----- */
+
+/* ----- 1. Import Fonts ----- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+/* ----- 2. CSS Variabelen (Kleurenpalet) ----- */
+:root {
+    --kleur-olijf: #3b4114; /* Voor tekst en titels [cite: 22] */
+    --kleur-jade: #c3bd9f; /* Voor subtiele achtergronden [cite: 23] */
+    --kleur-kastanje: #53170f; /* Accentkleur voor knoppen (afgeleid) */
+    --kleur-wit: #FFFFFF;
+    --kleur-lichtgrijs: #f8f8f8;
+    --kleur-koraal:#a83031;
+    --kleur-terracotta:#d34d2a;
+    --kleur-abrikoos:#df7647;
+
+    --font-titel: 'Playfair Display', serif; [cite_start]/* Primair Font [cite: 28, 30] */
+    --font-tekst: 'Montserrat', sans-serif; [cite_start]/* Secundair Font [cite: 31, 33] */
+}
+
+/* ----- 3. Algemene Stijlen ----- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-tekst);
+    color: var(--kleur-olijf);
+    line-height: 1.6;
+    background-color: var(--kleur-wit);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-titel);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ----- 4. Header & Navigatie ----- */
+.main-header {
+    background: var(--kleur-wit);
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .container {
+    display: flex;
+    flex-direction: column;     /* Stapelt logo en nav verticaal */
+    align-items: center;        /* Centreert alles horizontaal */
+}
+
+.main-header .logo img {
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--kleur-olijf);
+    font-weight: 700;
+}
+
+.cta-button {
+    background-color: var(--kleur-kastanje);
+    color: var(--kleur-wit);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #7a411e;
+}
+
+/* ----- 5. Secties ----- */
+.section {
+    padding: 80px 0;
+}
+
+/* Hero Sectie */
+#hero {
+    background-color: var(--kleur-jade);
+    text-align: center;
+}
+
+/* Specialisaties Sectie */
+#specialisaties {
+    background-color: var(--kleur-wit);
+}
+
+.specialisaties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.specialisatie-item img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.specialisatie-item h3 {
+    font-family: var(--font-titel);
+    font-size: 1.5rem;
+}
+
+.specialisatie-item--var-1 {
+    color: var(--kleur-kastanje);
+}
+
+.specialisatie-item--var-2 {
+    color: var(--kleur-olijf);
+}
+/* Over Sectie */
+#over {
+    background-color: var(--kleur-jade);
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#over .over-text {
+    flex: 1;
+}
+
+#over .over-image {
+    flex: 1;
+    text-align: center;
+}
+
+#over .over-image img {
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+
+/* ----- 6. Footer ----- */
+.main-footer {
+    background-color: var(--kleur-olijf);
+    color: var(--kleur-wit);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.main-footer p {
+    margin: 0;
+}
+
+/* ----- 7. Contact Pagina Stijlen ----- */
+
+#contact-title-section {
+     background-color: var(--kleur-jade);
+     text-align: center;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.contact-info h3 {
+    font-family: var(--font-titel);
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-info p, .contact-info a {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-decoration: none;
+    color: var(--kleur-olijf);
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.opening-hours {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-map iframe {
+    border-radius: 8px;
+}
+
+/* ----- 8. Responsive Aanpassingen ----- */
+@media (max-width: 768px) {
+    .main-header .container, .main-nav ul {
+        flex-direction: column;
+    }
+    .main-nav li {
+        margin: 10px 0;
+    }
+
+    .specialisaties-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #over {
+        flex-direction: column;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

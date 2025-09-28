@@ -3,51 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kine Thalia</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-        }
-        h1, h2 {
-            text-align: center;
-        }
-        .rosa-embed {
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-    </style>
+    <title>Home | Kinepraktijk Thalia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Welkom bij Mijn Kinepraktijk</h1>
-    <p>
-        Hieronder kan je eenvoudig en snel een afspraak maken via onze online module.
-        Kies een beschikbaar tijdstip dat voor jou het beste past.
-    </p>
+<div id="header-placeholder"></div>
 
-    <h2>Maak hier je afspraak</h2>
+<main>
+    <section id="hero" class="section">
+        <div class="container">
+            <h1>Uw Beweging, Mijn Zorg.</h1>
+            <p>Professionele kinesitherapie op maat voor een pijnvrij en actief leven.</p>
+        </div>
+    </section>
 
-    <div class="rosa-embed">
-        <iframe
-                src="https://rosa.be/nl/embed/alma-dab?isExternalBooking=true"
-                width="100%"
-                height="600"
-                >
-        </iframe>
-    </div>
+    <section id="specialisaties" class="section">
+        <div class="container">
+            <h2>Waarmee kan ik u helpen?</h2>
+            <div class="specialisaties-grid">
+                <div class="specialisatie-item specialisatie-item--var-1">
+                    <img src="images/Squat_rood.png" alt="Icoon van squat oefening">
+                    <h3>Sportblessures</h3>
+                    <p>Begeleiding en revalidatie bij acute en chronische sportletsels.</p>
+                </div>
+                <div class="specialisatie-item specialisatie-item--var-2">
+                    <img src="images/Lunge_groen.png" alt="Icoon van lunge oefening">
+                    <h3>Rug- en Nekklachten</h3>
+                    <p>Manuele therapie en oefentherapie voor het verlichten van pijn en stijfheid.</p>
+                </div>
+                <div class="specialisatie-item specialisatie-item--var-1">
+                    <img src="images/Stretch_rood.png" alt="Icoon van stretch oefening">
+                    <h3>Post-operatieve Revalidatie</h3>
+                    <p>Een persoonlijk revalidatieplan na uw chirurgische ingreep.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <p style="text-align:center; margin-top: 20px;">
-        Problemen met de module? Neem dan telefonisch contact met ons op.
-    </p>
-</div>
+    <section id="over" class="section">
+        <div class="container">
+            <div class="over-text">
+                <h2>Over Emilie Boucquey</h2>
+                <p>
+                    Welkom in mijn praktijk. Als gediplomeerd kinesitherapeute is het mijn passie om mensen te helpen hun bewegingsvrijheid terug te winnen en hun levenskwaliteit te verbeteren. Ik geloof in een persoonlijke aanpak, waarbij we samen werken aan uw specifieke doelen.
+                </p>
+                <p>
+                    Door middel van een grondige analyse en een combinatie van manuele technieken en gerichte oefentherapie, stippelen we een behandeltraject uit dat volledig is afgestemd op uw noden.
+                </p>
+            </div>
+            <div class="over-image">
+                <img src="https://via.placeholder.com/350" alt="Portret van kinesitherapeute Emilie Boucquey">
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="header-footer-replacer.js"></script>
 
 </body>
 </html>
