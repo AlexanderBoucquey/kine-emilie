@@ -1,7 +1,7 @@
 /* ----- Kinepraktijk Emilie Boucquey - Huisstijl ----- */
 
 /* ----- 1. Import Fonts ----- */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work Sans:wght@400;700&family=Neuton:wght@700&display=swap');
 
 /* ----- 2. CSS Variabelen (Kleurenpalet) ----- */
 :root {
@@ -14,8 +14,8 @@
     --kleur-terracotta:#d34d2a;
     --kleur-abrikoos:#df7647;
 
-    --font-titel: 'Playfair Display', serif; [cite_start]/* Primair Font [cite: 28, 30] */
-    --font-tekst: 'Montserrat', sans-serif; [cite_start]/* Secundair Font [cite: 31, 33] */
+    --font-titel: 'Neuton', serif; /* Primair Font  */
+    --font-tekst: 'Work Sans', sans-serif; /* Secundair Font */
 }
 
 /* ----- 3. Algemene Stijlen ----- */
