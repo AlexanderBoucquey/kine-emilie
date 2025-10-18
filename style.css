@@ -1,24 +1,23 @@
-/* ----- Kinepraktijk Emilie Boucquey - Huisstijl ----- */
+/* ----- Kinepraktijk Thalia - Huisstijl ----- */
 
-/* ----- 1. Import Fonts ----- */
-@import url('https://fonts.googleapis.com/css2?family=Work Sans:wght@400;700&family=Neuton:wght@700&display=swap');
+/* ----- 1. Import Fonts & Variabelen ----- */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&family=Neuton:wght@700&display=swap');
 
-/* ----- 2. CSS Variabelen (Kleurenpalet) ----- */
 :root {
-    --kleur-olijf: #3b4114; /* Voor tekst en titels */
-    --kleur-jade: #c3bd9f; /* Voor subtiele achtergronden */
-    --kleur-kastanje: #53170f; /* Accentkleur voor knoppen (afgeleid) */
+    --kleur-olijf: #3b4114;
+    --kleur-jade: #c3bd9f;
+    --kleur-kastanje: #53170f;
     --kleur-wit: #FFFFFF;
     --kleur-lichtgrijs: #f8f8f8;
-    --kleur-koraal:#a83031;
-    --kleur-terracotta:#d34d2a;
-    --kleur-abrikoos:#df7647;
+    --kleur-koraal: #a83031;
+    --kleur-terracotta: #d34d2a;
+    --kleur-abrikoos: #df7647;
 
-    --font-titel: 'Neuton', serif; /* Primair Font  */
-    --font-tekst: 'Work Sans', sans-serif; /* Secundair Font */
+    --font-titel: 'Neuton', serif;
+    --font-tekst: 'Work Sans', sans-serif;
 }
 
-/* ----- 3. Algemene Stijlen ----- */
+/* ----- 2. Algemene Stijlen ----- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -44,137 +43,138 @@ h1, h2, h3 {
     margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 3rem;
-}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+p  { margin-bottom: 15px; }
+img { max-width: 100%; }
 
-h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
-img {
-    max-width: 100%;
-}
-
-/* ----- 4. Header & Navigatie ----- */
+/* ----- 3. Header & Navigatie ----- */
 .main-header {
     background: var(--kleur-wit);
     padding: 20px 0;
     border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-
 .main-header .container {
     display: flex;
-    flex-direction: column;     /* Stapelt logo en nav verticaal */
-    align-items: center;        /* Centreert alles horizontaal */
+    flex-direction: column;
+    align-items: center;
 }
-
 .main-header .logo img {
     height: 60px;
     margin-bottom: 5px;
 }
-
 .main-nav ul {
     list-style: none;
     display: flex;
     align-items: center;
 }
-
 .main-nav li {
     margin: 0 15px;
 }
-
 .main-nav a {
     text-decoration: none;
     color: var(--kleur-olijf);
     font-weight: 700;
 }
 
-.cta-button {
-    background-color: var(--kleur-kastanje);
-    color: var(--kleur-wit);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #7a411e;
-}
-
-/* ----- 5. Secties ----- */
+/* ----- 4. Algemene Sectie Stijlen ----- */
 .section {
     padding: 80px 0;
 }
 
-/* Hero Sectie */
-#hero {
+/* Accentkleur voor specifieke secties (via ID) */
+#hero,
+#over,
+#contact-title-section {
     background-color: var(--kleur-jade);
     text-align: center;
 }
 
-/* Specialisaties Sectie */
-#specialisaties {
-    background-color: var(--kleur-wit);
-}
+/* ----- 5. Pagina-specifieke Secties ----- */
 
+/* Home: Specialisaties */
 .specialisaties-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     text-align: center;
 }
-
 .specialisatie-item img {
     height: 80px;
     margin-bottom: 20px;
 }
-
 .specialisatie-item h3 {
     font-family: var(--font-titel);
     font-size: 1.5rem;
 }
-
 .specialisatie-item--var-1 {
     color: var(--kleur-kastanje);
 }
-
 .specialisatie-item--var-2 {
     color: var(--kleur-olijf);
 }
-/* Over Sectie */
+
+/* Home & Therapeuten: Over sectie */
 #over {
-    background-color: var(--kleur-jade);
     display: flex;
     align-items: center;
     gap: 50px;
 }
+#over .over-text { flex: 1; text-align: left; }
+#over .over-image { flex: 1; text-align: center; }
+#over .over-image img { max-width: 350px; border-radius: 10px; }
 
-#over .over-text {
-    flex: 1;
+/* Behandelingen Pagina */
+.behandeling-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.behandeling-item {
+    background-color: var(--kleur-lichtgrijs);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--kleur-olijf);
+    text-align: left;
+}
+.behandeling-item h3 {
+    margin-bottom: 10px;
+}
+.specialisatie-tag {
+    font-size: 0.9rem;
+    color: var(--kleur-kastanje);
+    font-weight: 700;
+    margin: 0;
 }
 
-#over .over-image {
-    flex: 1;
-    text-align: center;
+/* Contact Pagina */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: flex-start;
 }
-
-#over .over-image img {
-    max-width: 350px;
-    border-radius: 10px;
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
-
+.contact-info p, .contact-info a {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-decoration: none;
+    color: var(--kleur-olijf);
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+.opening-hours {
+    list-style: none;
+    padding: 0;
+}
+.contact-map iframe {
+    border-radius: 8px;
+}
 
 /* ----- 6. Footer ----- */
 .main-footer {
@@ -183,83 +183,36 @@ img {
     text-align: center;
     padding: 40px 20px;
 }
-
 .main-footer p {
     margin: 0;
 }
-
-/* ----- 7. Contact Pagina Stijlen ----- */
-
-#contact-title-section {
-     background-color: var(--kleur-jade);
-     text-align: center;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: flex-start;
-}
-
-.contact-info h3 {
-    font-family: var(--font-titel);
-    font-size: 1.5rem;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-.contact-info p, .contact-info a {
-    font-size: 1rem;
-    line-height: 1.7;
+.main-footer a {
+    color: inherit;
     text-decoration: none;
-    color: var(--kleur-olijf);
 }
-
-.contact-info a:hover {
+.main-footer a:hover {
     text-decoration: underline;
 }
 
-.opening-hours {
-    list-style: none;
-    padding: 0;
+.copyright-text {
+    font-size: 0.8rem; /* Ongeveer helft van de normale tekstgrootte */
+    margin-top: 10px; /* Voegt wat ruimte toe onder de contactgegevens */
 }
 
-.contact-map iframe {
-    border-radius: 8px;
-}
-
-/* ----- 8. Responsive Aanpassingen ----- */
+/* ----- 7. Responsive Aanpassingen ----- */
 @media (max-width: 768px) {
-    .main-header .container, .main-nav ul {
+    .main-nav ul {
         flex-direction: column;
     }
     .main-nav li {
         margin: 10px 0;
     }
-
-    .specialisaties-grid {
-        grid-template-columns: 1fr;
-    }
-
-    #over {
-        flex-direction: column;
-    }
-
+    .specialisaties-grid,
+    .behandeling-grid,
     .contact-grid {
         grid-template-columns: 1fr;
     }
+    #over {
+        flex-direction: column;
+    }
 }
-
-/* ----- list styling ----- */
-.behandelingen-lijst ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-.behandelingen-lijst li {
-    font-size: 1.2rem;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-}
-
-/* ----- Einde van style.css ----- */
