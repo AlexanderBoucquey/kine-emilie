@@ -5,8 +5,8 @@
 
 /* ----- 2. CSS Variabelen (Kleurenpalet) ----- */
 :root {
-    --kleur-olijf: #3b4114; /* Voor tekst en titels [cite: 22] */
-    --kleur-jade: #c3bd9f; /* Voor subtiele achtergronden [cite: 23] */
+    --kleur-olijf: #3b4114; /* Voor tekst en titels */
+    --kleur-jade: #c3bd9f; /* Voor subtiele achtergronden */
     --kleur-kastanje: #53170f; /* Accentkleur voor knoppen (afgeleid) */
     --kleur-wit: #FFFFFF;
     --kleur-lichtgrijs: #f8f8f8;
