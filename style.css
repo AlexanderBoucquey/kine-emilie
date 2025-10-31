@@ -37,7 +37,7 @@ body {
     padding: 0 30px;
 }
 
-h1, h2, h3 {
+h1, h2, h2-contact, h3 {
     font-family: var(--font-titel);
     font-weight: 700;
     margin-bottom: 20px;
@@ -45,6 +45,7 @@ h1, h2, h3 {
 
 h1 { font-size: 3rem; }
 h2 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+h2-contact { font-size: 2.5rem; text-align: left; margin-bottom: 40px; }
 p  { margin-bottom: 15px; }
 img { max-width: 100%; }
 
@@ -99,6 +100,11 @@ img { max-width: 100%; }
     gap: 40px;
     text-align: center;
 }
+.specialisatie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .specialisatie-item img {
     height: 80px;
     margin-bottom: 20px;
@@ -106,6 +112,8 @@ img { max-width: 100%; }
 .specialisatie-item h3 {
     font-family: var(--font-titel);
     font-size: 1.5rem;
+    min-height: 3.5em;
+    margin-bottom: 1rem;
 }
 .specialisatie-item--var-1 {
     color: var(--kleur-kastanje);
