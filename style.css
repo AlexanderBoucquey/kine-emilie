@@ -224,3 +224,53 @@ img { max-width: 100%; }
         flex-direction: column;
     }
 }
+
+/* ----- Bento Collage Grid ----- */
+.kine-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 gelijke kolommen */
+    grid-template-rows: repeat(4, 1fr);    /* 4 gelijke rijen */
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.grid-item {
+    aspect-ratio: 1 / 1; /* Maakt elk vakje perfect vierkant */
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--kleur-lichtgrijs);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorgt dat de foto het vakje vult zonder vervorming */
+    display: block;
+}
+
+/* DE CENTRALE FOTO: Dwing deze naar het midden (Rij 2-3, Kolom 2-3) */
+.grid-item.center {
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 2;
+    border: 2px solid var(--kleur-jade); /* Subtiel accent voor de focusfoto */
+}
+
+/* DE "WIDE" FIX: Deze items nemen 2 vakjes breedte in om gaten te vullen */
+.grid-item.wide {
+    grid-column: span 2;
+    aspect-ratio: 2 / 1; /* Past de verhouding aan voor het brede vakje */
+}
+
+/* RESPONSIVE: Op mobiel verspringen we naar een rustiger 2-koloms raster */
+@media (max-width: 768px) {
+    .kine-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 8px;
+    }
+
+    .grid-item.center, .grid-item.wide {
+        grid-column: span 2; /* Neemt de volledige breedte in op mobiel */
+        aspect-ratio: 1 / 1;
+    }
+}
