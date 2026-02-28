@@ -225,17 +225,17 @@ img { max-width: 100%; }
     }
 }
 
-/* ----- Bento Collage Grid ----- */
-.kine-bento-grid {
+/* ----- Foto Collage Grid ----- */
+
+.kine-four-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 gelijke kolommen */
-    grid-template-rows: repeat(4, 1fr);    /* 4 gelijke rijen */
-    gap: 12px;
-    margin-top: 40px;
+    grid-template-columns: 2fr 1fr; /* Links 2 delen, rechts 1 deel breed */
+    grid-template-rows: repeat(3, 200px); /* 3 vaste rijen hoogte */
+    gap: 15px;
+    margin: 40px 0; /* Ruimte boven en onder de collage */
 }
 
 .grid-item {
-    aspect-ratio: 1 / 1; /* Maakt elk vakje perfect vierkant */
     overflow: hidden;
     border-radius: 8px;
     background-color: var(--kleur-lichtgrijs);
@@ -244,38 +244,28 @@ img { max-width: 100%; }
 .grid-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Zorgt dat de foto het vakje vult zonder vervorming */
+    object-fit: cover;
     display: block;
 }
 
-/* DE CENTRALE FOTO: Dwing deze naar het midden (Rij 2-3, Kolom 2-3) */
-.grid-item.center {
-    grid-column: 2 / span 2;
-    grid-row: 2 / span 2;
-    border: 2px solid var(--kleur-jade); /* Subtiel accent voor de focusfoto */
+/* De grote foto beslaat alle 3 de rijen aan de linkerkant */
+.grid-item.large {
+    grid-row: span 3;
 }
 
-/* DE "WIDE" FIX: Deze items nemen 2 vakjes breedte in om gaten te vullen */
-.grid-item.wide {
-    grid-column: span 2;
-    aspect-ratio: 2 / 1; /* Past de verhouding aan voor het brede vakje */
-}
-
-/* RESPONSIVE: Op mobiel verspringen we naar een rustiger 2-koloms raster */
+/* Mobiele weergave: alles onder elkaar */
 @media (max-width: 768px) {
-    .kine-bento-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .kine-four-grid {
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
-        gap: 8px;
     }
 
-    .grid-item.center, .grid-item.wide {
-        grid-column: span 2; /* Neemt de volledige breedte in op mobiel */
-        aspect-ratio: 1 / 1;
-    }
-
-    .grid-item:last-child {
-        grid-column: span 2;
+    .grid-item.large {
+        grid-row: span 1;
         aspect-ratio: 16 / 9;
+    }
+
+    .grid-item {
+        aspect-ratio: 1 / 1;
     }
 }
